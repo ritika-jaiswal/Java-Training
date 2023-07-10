@@ -9,11 +9,27 @@ public class Fibonacci {
         System.out.print(num1 + " " + num2);
         for (i = 2; i < count; i++) {
             num3 = num1 + num2;
-            System.out.print(" " + num3 + " ");
+            System.out.print( " " + num3 );
             num1 = num2;
             num2 = num3;
         }
     }
+
+//    public static String fibonacci_series(int count) {
+//        int num1 = 0, num2 = 1, num3, i;
+//        String fibSer =  "" + num1 + " " + num2;
+//        System.out.print(num1 + " " + num2);
+//        for (i = 2; i < count; i++) {
+//            num3 = num1 + num2;
+//            fibSer = fibSer+" " + num3 + " ";
+//            System.out.print(" " + num3 + " ");
+//
+//            num1 = num2;
+//            num2 = num3;
+//        }
+//        return fibSer;
+//    }
+
 
     public static void main(String[] args) {
         System.out.println("Eneter a num upto end fibonacci series:");

@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 public class LeapYear {
 
-    public static void leapyearOrNot(int year) {
-        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+    public static boolean leapyearOrNot(int year) {
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             System.out.println("Specified year is leap year");
-        else
+            return true;
+        }
+        else {
             System.out.println("Specified year is not a leap year");
+            return false;
+        }
     }
 
     public static void main(String[] args) {

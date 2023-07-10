@@ -1,4 +1,5 @@
-package org.example.calculator;
+package org.example.junitpractice;
+
 
 import org.junit.*;
 
@@ -19,17 +20,17 @@ public class JUnitPracticeExTest {
     public void testFindMax(){
         System.out.println("test case find max");
         assertEquals(1, JUnitPracticeEx.findMin(new int[]{1,3,4,2}));
-        assertEquals(-12,JUnitPracticeEx.findMin(new int[]{-12,-3,-4,-2}));
+        assertEquals(-12, JUnitPracticeEx.findMin(new int[]{-12,-3,-4,-2}));
     }
     @Test
     public void testCube(){
         System.out.println("test case cube");
-        assertEquals(27,JUnitPracticeEx.cube(3));
+        assertEquals(27, JUnitPracticeEx.cube(3));
     }
     @Test
     public void testReverseWord(){
         System.out.println("test case reverse word");
-        assertEquals("akitiR",JUnitPracticeEx.reverseString("Ritika"));
+        assertEquals("akitiR", JUnitPracticeEx.reverseString("Ritika"));
     }
     @After
     public void tearDown() throws Exception {

@@ -2,6 +2,7 @@ package org.example.interfaceprog;
 
  interface employee {
      void sallary();
+
  }
 
  public class InterfaceEx implements employee {

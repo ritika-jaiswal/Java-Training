@@ -1,4 +1,5 @@
-package org.example.calculator;
+package org.example.junitpractice;
+
 
 public class JUnitPracticeEx {
 

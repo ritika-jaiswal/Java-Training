@@ -1,0 +1,212 @@
+[
+  {
+    "question": "What is the numerical range of a char?",
+    "answers": [
+      {
+        "answer": "-128 to 127",
+        "isCorrect": false
+      },
+      {
+        "answer": "-(215) to (215) - 1",
+        "isCorrect": false
+      },
+      {
+        "answer": "0 to 32767",
+        "isCorrect": false
+      },
+      {
+        "answer": "0 to 65535",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "You want a class to have access to members of another class in the same package. Which is the most restrictive access that accomplishes this objective?",
+    "answers": [
+      {
+        "answer": "public",
+        "isCorrect": false
+      },
+      {
+        "answer": "public",
+        "isCorrect": false
+      },
+      {
+        "answer": "protected",
+        "isCorrect": false
+      },
+      {
+        "answer": "default access",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Which three are valid method signatures in an interface? \n(1): private int getArea(); \n(2): public float getVol(float x);\n(3): public void main(String [] args);\n (4): public static void main(String [] args);\n (5): boolean setFlag(Boolean [] test);",
+    "answers": [
+      {
+        "answer": "1 and 2",
+        "isCorrect": false
+      },
+      {
+        "answer": "2, 3 and 5",
+        "isCorrect": true
+      },
+      {
+        "answer": "3, 4, and 5",
+        "isCorrect": false
+      },
+      {
+        "answer": "2 and 4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "What will be the output of the program?\n class Super \n{ \n    public Integer getLength() \n    {\n        return new Integer(4); \n    } \n} \n\npublic class Sub extends Super \n{ \n    public Long getLength() \n    {\n        return new Long(5); \n    } \n\n    public static void main(String[] args) \n    { \n        Super sooper = new Super(); \n        Sub sub = new Sub(); \n        System.out.println( \n        sooper.getLength().toString() + \",\" + sub.getLength().toString() ); \n    } \n}",
+    "answers": [
+      {
+        "answer": "4, 4",
+        "isCorrect": false
+      },
+      {
+        "answer": "4, 5",
+        "isCorrect": false
+      },
+      {
+        "answer": "5, 4",
+        "isCorrect": false
+      },
+      {
+        "answer": "Compilation fails.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "What will be the output of the program?\npublic class X \n{  \n    public static void main(String [] args) \n    {\n        try \n        {\n            badMethod(); /* Line 7 */\n            System.out.print(\"A\"); \n        } \n        catch (Exception ex) /* Line 10 */\n        {\n            System.out.print(\"B\"); /* Line 12 */\n        } \n        finally /* Line 14 */\n        {\n            System.out.print(\"C\"); /* Line 16 */\n        }  \n        System.out.print(\"D\"); /* Line 18 */\n    } \n    public static void badMethod() \n    {\n        throw new RuntimeException(); \n    } \n}",
+    "answers": [
+      {
+        "answer": "AB",
+        "isCorrect": false
+      },
+      {
+        "answer": "BC",
+        "isCorrect": false
+      },
+      {
+        "answer": "BC",
+        "isCorrect": false
+      },
+      {
+        "answer": "BCD",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Which statement is true?",
+    "answers": [
+      {
+        "answer": "A try statement must have at least one corresponding catch block.",
+        "isCorrect": false
+      },
+      {
+        "answer": "Multiple catch statements can catch the same class of exception more than once.",
+        "isCorrect": false
+      },
+      {
+        "answer": "An Error that might be thrown in a method must be declared as thrown by that method, or be handled within that method.",
+        "isCorrect": false
+      },
+      {
+        "answer": "Except in case of VM shutdown, if a try block starts to execute, a corresponding finally block will always start to execute.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Which collection class allows you to access its elements by associating a key with an element's value, and provides synchronization?",
+    "answers": [
+      {
+        "answer": "java.util.SortedMap",
+        "isCorrect": false
+      },
+      {
+        "answer": "java.util.TreeMap",
+        "isCorrect": false
+      },
+      {
+        "answer": "java.util.TreeSet",
+        "isCorrect": false
+      },
+      {
+        "answer": "java.util.Hashtable",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Which is true about a method-local inner class?",
+    "answers": [
+      {
+        "answer": "It must be marked final.",
+        "isCorrect": false
+      },
+      {
+        "answer": "It can be marked abstract.",
+        "isCorrect": true
+      },
+      {
+        "answer": "It can be marked public.",
+        "isCorrect": false
+      },
+      {
+        "answer": "It can be marked static.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Which two of the following methods are defined in class Thread?\n(1): start()\n(2): wait()\n(3): notify()\n(4): run()\n(5): terminate()",
+    "answers": [
+      {
+        "answer": "1 and 4",
+        "isCorrect": true
+      },
+      {
+        "answer": "2 and 3",
+        "isCorrect": false
+      },
+      {
+        "answer": "3 and 4",
+        "isCorrect": false
+      },
+      {
+        "answer": "2 and 4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Which statement is true?",
+    "answers": [
+      {
+        "answer": "The notifyAll() method must be called from a synchronized context.",
+        "isCorrect": true
+      },
+      {
+        "answer": "To call wait(), an object must own the lock on the thread.",
+        "isCorrect": false
+      },
+      {
+        "answer": "The notify() method is defined in class java.lang.Thread.",
+        "isCorrect": false
+      },
+      {
+        "answer": "The notify() method causes a thread to immediately release its locks.",
+        "isCorrect": false
+      }
+    ]
+  }
+]
