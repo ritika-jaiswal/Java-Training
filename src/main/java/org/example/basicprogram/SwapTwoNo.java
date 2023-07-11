@@ -4,16 +4,19 @@ package org.example.basicprogram;
 
 
 public class SwapTwoNo {
+     public static void swapNo(int num1, int num2){
+         int temp;
+         System.out.println("Before swaping num1 = " + num1 + " num2 = " + num2);
+         temp = num1;
+         num1 = num2;
+         num2 = temp;
+//         System.out.println("After swaping num1 = " + num1 + " num2 = " + num2);
+         System.out.println(num1 + ", " +num2);
+     }
     public static void main(String[] args) {
         int num1 = 12;
         int num2 = 44;
-        int temp;
-        System.out.println("Before swaping num1 = " + num1 + " num2 = " + num2);
-        temp = num1;
-        num1 = num2;
-        num2 = temp;
-
-        System.out.println("After swaping num1 = " + num1 + " num2 = " + num2);
+        swapNo(num1, num2);
 
     }
 

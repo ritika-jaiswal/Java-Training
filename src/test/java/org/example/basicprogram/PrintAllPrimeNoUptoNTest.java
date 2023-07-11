@@ -21,7 +21,7 @@ public class PrintAllPrimeNoUptoNTest {
             System.out.flush();
             System.setOut(originalOutput);
             String output = outputStream.toString();
-            System.out.println(output.toString());
+            System.out.println(output);
             String expextedOutput = "2,3,5,7";
             assertEquals(expextedOutput, "" + output);
         }catch (Exception e){
