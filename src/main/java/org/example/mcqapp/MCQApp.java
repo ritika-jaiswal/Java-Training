@@ -46,7 +46,7 @@ public class MCQApp {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < QUESTIONS.length; i++) {
-            System.out.println("Question " + (i + 1) + ":");
+//            System.out.println("Question " + (i + 1) + ":");
             System.out.println(QUESTIONS[i]);
 
             for (String answer : ANSWERS[i]) {

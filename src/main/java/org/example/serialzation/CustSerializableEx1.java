@@ -1,4 +1,5 @@
-package org.example.practice.program;
+package org.example.serialzation;
+
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -30,7 +31,7 @@ class Account implements Serializable {
 
 }
 
-public class CustSerializable {
+public class CustSerializableEx1 {
     public static void main(String[] args) throws Exception {
         Account account = new Account();
         System.out.println(account.name + "............" + account.pass + ".................." + account.pinNo);
