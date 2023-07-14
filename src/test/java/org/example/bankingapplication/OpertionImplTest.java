@@ -2,9 +2,8 @@ package org.example.bankingapplication;
 
 import static junit.framework.Assert.*;
 import static org.junit.Assert.assertNotEquals;
-
 import org.junit.*;
-import org.junit.jupiter.api.Order;
+
 
 public class OpertionImplTest {
     private static OpertionImpl operation;
@@ -16,8 +15,8 @@ public class OpertionImplTest {
 
 
     @Test
-    @Order(1)
     public void testDeposit() {
+        operation.balance = 0;
         operation.deposit(200);
         assertEquals(200, operation.balance);
         assertEquals(200, operation.previousTransaction);
@@ -28,7 +27,6 @@ public class OpertionImplTest {
     }
 
     @Test
-//    @Order(4)
     public void testWithdrawalSufficientBalance() {
         operation.balance = 200;
         operation.withdrwal(50);
@@ -40,7 +38,6 @@ public class OpertionImplTest {
     }
 
     @Test
-//    @Order(6)
     public void testWithdrawalInsufficientBalance() {
         operation.balance = 100;
         operation.withdrwal(200);
@@ -53,14 +50,12 @@ public class OpertionImplTest {
     }
 
     @Test
-//    @Order(1)
     public void testGetPreviousTransactionNoTransaction() {
         assertEquals("No Transaction Occured",operation.getPriviousTransaction());
         assertNotEquals("NoTransactionOccured",operation.getPriviousTransaction());
     }
 
     @Test
-//    @Order(3)
     public void testGetPreviousTransactionDeposit() {
         operation.previousTransaction = 50;
         assertEquals("Deposited amount: 50",operation.getPriviousTransaction());
@@ -68,7 +63,6 @@ public class OpertionImplTest {
     }
 
     @Test
-//    @Order(5)
     public void testGetPreviousTransactionWithdrawal() {
         operation.previousTransaction = -30;
         assertEquals("Withdrwal Amount: -30", operation.getPriviousTransaction());

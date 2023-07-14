@@ -29,7 +29,7 @@ public class OpertionImpl implements Opertions {
         if(amount <= balance){
             balance = balance - amount;
             previousTransaction = -amount;
-            System.out.println("Withdrawl succesfully!");
+            System.out.println("Withdrawl amount " + amount +" succesfully!");
             System.out.println("Total Balance : " + balance);
 
         }else if(amount > balance){
