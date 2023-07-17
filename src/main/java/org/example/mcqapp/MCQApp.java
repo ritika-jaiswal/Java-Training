@@ -1,6 +1,5 @@
 package org.example.mcqapp;
 
-
 import java.util.Scanner;
 
 
@@ -57,7 +56,7 @@ public class MCQApp {
             String userAnswer = scanner.nextLine().trim().toUpperCase();
 
             if (isValidAnswer(userAnswer)) {
-                int userChoice = userAnswer.charAt(0) - 'A';
+                    int userChoice = userAnswer.charAt(0) - 'A';
                 if (userChoice == CORRECT_ANSWERS[i]) {
                     totalCorrectAnswers++;
                     System.out.println("Correct answer!\n");

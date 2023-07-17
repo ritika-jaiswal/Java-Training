@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 public class MCQAppTest {
     @Test
     public void testMCQApp() {
-//        String input = "D\nC\nB\nD\nD\nD\nD\nB\nA\nA\n";
-        String input = "A\nC\nB\nD\nD\nD\nD\nB\nA\nA\n";
+        String input = "D\nC\nB\nD\nD\nD\nD\nB\nA\nA\n";
+//        String input = "A\nC\nB\nD\nD\nD\nD\nB\nA\nA\n";
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
