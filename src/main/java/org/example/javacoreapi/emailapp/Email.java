@@ -1,6 +1,9 @@
 package org.example.javacoreapi.emailapp;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class Email {
     private String firstName;
@@ -9,21 +12,22 @@ class Email {
     private String department;
     private String email;
     private int defaultPasswordLength = 10;
-    private String companySufix = "";
+    private String emailSufix = "";
+    String passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
 
-    public Email(String firstName, String lastName, String companySufix) {
+    public Email(String firstName, String lastName, String emailSufix) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.companySufix = companySufix;
+        this.emailSufix = emailSufix;
 
         System.out.println("Email Created: " + firstName + " " + lastName);
         this.department = setDepartement();
         System.out.println("\nDepartment: " + this.department);
 
-        this.password = randomPassword(defaultPasswordLength);
+        this.password = randomPassword(defaultPasswordLength,passwordRegex);
         System.out.println("Your password is: " + this.password);
 
-        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySufix.toLowerCase();
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + emailSufix.toLowerCase();
         System.out.println("Your email is : " + email);
 
         System.out.println("You want to change the password \n 1. yes\n 2. No\n press 1 Or 2");
@@ -32,15 +36,18 @@ class Email {
         if (choise == 1) {
             System.out.println("Enter your new password: ");
             Scanner inputValue = new Scanner(System.in);
-            changePassword(inputValue.nextLine());
-            this.password = getPassword();
+            String value = inputValue.nextLine();
+//            if(value.length() < defaultPasswordLength){
+                changePassword(value,passwordRegex);
+                this.password = getPassword();
+//            }else{System.out.println("Password may not be include more than ten character");}
+
         } else {
             showInfo();
         }
-
     }
 
-    private String setDepartement() {
+    public String setDepartement() {
         System.out.println(
                 "Department Codes\n1 for sales\n2 for Development\n3 for Accounting\n0 for none\n Enter Department code");
         Scanner sc = new Scanner(System.in);
@@ -56,20 +63,52 @@ class Email {
         }
     }
 
-    private String randomPassword(int length) {
-        String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%";
-        char[] password = new char[length];
-        for (int i = 0; i < length; i++) {
-            int rand = (int) (Math.random() * passwordSet.length());
-            password[i] = passwordSet.charAt(rand);
+    public String randomPassword(int length, String passwordRegex) {
+        String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$!%*#?&";
+
+//        char[] password = new char[length];
+//        for (int i = 0; i < length; i++) {
+//            int rand = (int) (Math.random() * passwordSet.length());
+//            password[i] = passwordSet.charAt(rand);
+//        }
+//        return new String(password);
+
+        Pattern pattern = Pattern.compile(passwordRegex);
+        SecureRandom random = new SecureRandom();
+        StringBuilder password = new StringBuilder();
+        while (true) {
+            password.setLength(0); // Clear the password StringBuilder for each iteration
+
+            // Generate a random password of the desired length
+            for (int i = 0; i < length; i++) {
+                int index = random.nextInt(passwordSet.length());
+                password.append(passwordSet.charAt(index));
+            }
+
+            // Check if the generated password matches the regex pattern
+            Matcher matcher = pattern.matcher(password);
+            if (matcher.matches()) {
+                break;
+            }
         }
-        return new String(password);
 
+        return password.toString();
     }
+    public void changePassword(String chngPass, String passwordRegex) {
+//        String passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
+        Pattern pattern = Pattern.compile(passwordRegex);
+        Matcher matcher = pattern.matcher(chngPass);
+        try{
+            if (matcher.matches()) {
+                this.password = chngPass;
+            }else{
+                System.out.println("Password is invalid. Please use a stronger and valid password.");
 
+            }
+        }catch (Exception e){
+            System.out.println("Password is invalid. Please use a stronger password.");
+        }
 
-    public void changePassword(String chngPass) {
-        this.password = chngPass;
     }
 
     public String getPassword() {
