@@ -108,7 +108,6 @@ class Email {
         }catch (Exception e){
             System.out.println("Password is invalid. Please use a stronger password.");
         }
-
     }
 
     public String getPassword() {
