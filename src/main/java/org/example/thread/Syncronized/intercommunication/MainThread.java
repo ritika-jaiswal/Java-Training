@@ -1,5 +1,4 @@
-package org.example.multithreadingex;
-
+package org.example.thread.Syncronized.intercommunication;
 
 public class MainThread {
     public static void main(String[] args) {

@@ -1,8 +1,10 @@
-package org.example.multithreadingex;
+package org.example.thread;
+
+import org.example.multithreadingex.AnotherThreadCreateUsingThreadclass;
 
 public class CreateThreadUsingRunnable implements Runnable {
     public void run() {
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 5; i++) {
             System.out.println(i);
             System.out.println(Thread.currentThread().getName());
             Thread.currentThread().setName("Ritika Jaiswal");

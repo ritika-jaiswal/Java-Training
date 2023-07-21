@@ -1,4 +1,4 @@
-package org.example.multithreadingex;
+package org.example.thread.Syncronized.intercommunication;
 
 
 public class Producer extends Thread {
@@ -18,7 +18,7 @@ public class Producer extends Thread {
                 e.printStackTrace();
             }
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (Exception e) {
             }
             ;

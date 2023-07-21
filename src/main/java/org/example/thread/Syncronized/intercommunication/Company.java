@@ -1,4 +1,4 @@
-package org.example.multithreadingex;
+package org.example.thread.Syncronized.intercommunication;
 
 public class Company {
     int n;

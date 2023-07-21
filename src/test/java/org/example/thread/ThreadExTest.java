@@ -11,14 +11,13 @@ public class ThreadExTest {
 
         thread.start();
 
-        int maxWaitTime = 5000;
+        int maxWaitTime = 3000;
 
         try{
             thread.join(maxWaitTime);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-
         assertFalse(thread.isAlive());
         assertFalse(threadEx.isRunning());
     }

@@ -1,4 +1,4 @@
-package org.example.multithreadingex;
+package org.example.thread.Syncronized.intercommunication;
 
 public class Consumer extends Thread {
     Company c;
