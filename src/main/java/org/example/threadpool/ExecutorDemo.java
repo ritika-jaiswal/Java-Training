@@ -13,7 +13,7 @@ public class ExecutorDemo {
                 new PrintJob("Vidhya"),
                 new PrintJob("Rahul")
         };
-        ExecutorService service = Executors.newFixedThreadPool(1);
+        ExecutorService service = Executors.newFixedThreadPool(3);
         for (PrintJob job : jobs) {
             service.submit(job);
         }

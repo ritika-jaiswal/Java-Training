@@ -1,5 +1,6 @@
 package org.example.threadpool;
 
+import org.example.threadpool.callablethread.MyCallable;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,10 +1,10 @@
-package org.example.threadpool;
+package org.example.threadpool.callablethread;
 
 import java.util.concurrent.Callable;
 
 public class MyCallable implements Callable {
     int num;
-    MyCallable(int num){
+    public MyCallable(int num){
         this.num = num;
     }
 

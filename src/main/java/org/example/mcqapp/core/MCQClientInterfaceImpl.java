@@ -1,6 +1,5 @@
 package org.example.mcqapp.core;
 
-
 import org.example.mcqapp.core.data.MCQDataEnum;
 import org.example.mcqapp.core.model.Answer;
 import org.example.mcqapp.core.model.Mcq;
@@ -40,5 +39,4 @@ public class MCQClientInterfaceImpl implements MCQClientInterface {
         }
         return score;
     }
-
 }
