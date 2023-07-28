@@ -1,6 +1,6 @@
 package org.example.mcqapp.core.data;
 
-import org.example.mcqapp.core.model.Mcq;
+import org.example.mcqapp.core.repository.model.Mcq;
 import org.example.mcqapp.core.repository.JsonDataRepository;
 
 public enum MCQDataEnum {

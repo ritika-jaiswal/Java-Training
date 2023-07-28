@@ -2,8 +2,8 @@ package org.example.mcqapp.core.repository;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.example.mcqapp.core.model.Mcq;
-import org.example.mcqapp.core.model.Question;
+import org.example.mcqapp.core.repository.model.Mcq;
+import org.example.mcqapp.core.repository.model.Question;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package org.example.mcqapp.core.model;
+package org.example.mcqapp.core.repository.model;
 
 
 public final class Answer {

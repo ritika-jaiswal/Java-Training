@@ -1,4 +1,6 @@
-package org.example.mcqapp.core.model;
+package org.example.mcqapp.core.repository.model;
+
+import org.example.mcqapp.core.valueobjects.QuestionVo;
 
 import java.util.List;
 
